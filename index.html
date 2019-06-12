@@ -1,72 +1,86 @@
 <html>
   <head>
   	<meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  	<title>Kyiv growth</title>
+    <title>Костюм для міста</title>
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:site_name"
+          content="Костюм для міста"/>
+    <meta property="og:type" content="http://texty.org.ua/.../"/>
+    <meta property="og:title"
+          content="Костюм для міста"/>
+    <meta property="og:image" content="http://texty.org.ua/.../img/anons_cover.jpg"/>
+    <meta property="og:description"
+          content="Як забудовувався Київ із 60-х років минулого століття, та хто поселявся в тодішні новобудови"/>
+    <meta property="og:url" content="http://texty.org.ua/.../"/>
+
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:site" content="@textyorgua"/>
+    <meta property="twitter:account_id" content="49572937"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:url" content="http://texty.org.ua/.../"/>
+    <meta name="twitter:title"
+          content="Костюм для міста"/>
+    <meta name="twitter:description"
+          content="Як забудовувався Київ із 60-х років минулого століття, та хто поселявся в тодішні новобудови"/>
+    <meta name="twitter:image:src" content="http://texty.org.ua/.../img/anons_cover.jpg"/>
+    <meta name="twitter:image:width" content="1200"/>
+    <meta name="twitter:image:height" content="630"/>
+
+
+    <!-- Other Meta Tags -->
+    <meta name="title"
+          content="Костюм для міста">
+    <meta name="description"
+          content="Як забудовувався Київ із 60-х років минулого століття, та хто поселявся в тодішні новобудови">
+
+
       <!--<script id="MapboxGL" src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js"></script>-->
       <!--<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />-->
-      <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-              integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-              crossorigin=""></script>
-      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-            integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-            crossorigin=""/>
 
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="  crossorigin=""></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
     <link rel="stylesheet" href="css/styles.css"/>
-      <script src="libraries/mappa.js"></script>
-      <script src="libraries/p5.js"></script>
-      <script src="libraries/p5.dom.js"></script>
-      <script src="libraries/chroma.min.js"></script>
+
+    <script src="libraries/mappa.js"></script>
+    <script src="libraries/p5.js"></script>
+    <script src="libraries/p5.dom.js"></script>
+    <script src="libraries/chroma.min.js"></script>
 
 
   </head>
   <style>
 
-    body {
-       line-height: 1.6;
-    }
-       h3{
-        font-family: "Verdana", sans-serif;
 
-       
-       }
-       p {
-        font-family: "Verdana", sans-serif;
-        font-size: 12px;
-       }
-/*слайдер*/
-      #testContainer{
-        display:grid;
-        /* 50px - first column width, auto - second coliumn width*/
-        grid-template-columns: 50px auto 50px;
-      }
-/*контейнер займає місце від 2-ї до 3-ї границь колонок*/
-      #slider {
-        grid-column:2/3;
-      }
-/*контейнер займає місце від 1-ї до 2-ї границь колонок, має справа відступ 10*/
-      #year {
-        grid-column:1/2;
-        margin-right: 10px;
-      }
-
-       input[type='range']{
-        width: 100%;
-       }
-/*наповнення контейнера: тут можна прибрати рамку*/
-       input[type='text']{
-       width: 100%;
-       border-width:0;
-       outline: none;
-
-       }
 
    </style>
     
    
 
   <body>
-  <div class="content">
+    <div id="logo-soc">
+      <div class="logo">
+      <a href="http://texty.org.ua/" target="_blank"><img class='top-logo' style="width:100%" src="img/logo.png"/></a>
+      <!--<a href="http://texty.org.ua/" target="_blank"><img class='partner-logo' style="width:100%" src=""/></a>-->
+      </div>
+
+      <div id="soc">
+      <!--<div id="translate"><a href="http://texty.org.ua/d/2019/numbers/en"> <span>English</span> </a></div>-->
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://texty.org.ua/.../" target="_blank" class="share-btn"><i class="fab fa-facebook-square"></i></a>
+      <a href="https://twitter.com/intent/tweet?text=http://texty.org.ua/.../" target="_blank" class="share-btn"><i class="fab fa-twitter-square"></i></a>
+      </div>
+    </div>
+
+    <!--<div id="arrow-down" class="bounce" style="position:absolute;right:48%;"></div>-->
+
+
+    <div class="content">
     <div class="ornament">
       <img style="width: 100%" src="img/pattern01.png"/>
     </div>
@@ -82,7 +96,7 @@
 
     <div id="head">
       <h1 id="title">Костюм для міста</h1>
-      <h1 id="subtitle">Як забудовувався Київ із 60-х років минулого століття,  та хто поселявся в тодішні новобудови</h1>
+      <h1 id="subtitle">Як забудовувався Київ із 60-х років минулого століття, та хто поселявся в тодішні новобудови</h1>
     </div>
 
     <div class="lead"><h3>Типові люди мали ходити на типову позмінну роботу. Жити за схожими графіками й ходити подібними маршрутами. Годилося б, щоб і думали вони схоже. Згідно з тодішньою радянською зрівнялівкою, і жити їм належало в однакових будинках. Для архітекторів це означало, що з проектуванням можна було не завдавати собі праці – продумані за єдиним зразком будівлі належало просто «розставити», як у дитячому конструкторі, вписавши в територію. </h3></div>
@@ -108,10 +122,12 @@
 
 
 
+<div style="width:90%;  margin:auto 5% auto 5%;">
 
-  	<h3>Як з'являвся Київ</h3>
+
+  	<h3 style="font-weight:800; margin-top:50px;">Як з'являвся Київ</h3>
     <p>Тягніть за повзунок, щоб побачити в якому році з'являлися будинки, що існують на сьогодні. Чим темніший колір - тим старіший будинок.</p>
-    <p></p>
+</div>
     <!-- -->
     <!-- батьківський контейнер для слайдера та року -->
 <div id="testContainer">
