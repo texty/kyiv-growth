@@ -40,12 +40,13 @@
           content="Як забудовувався Київ із 60-х років минулого століття, та хто поселявся в тодішні новобудови">
 
 
-      <!--<script id="MapboxGL" src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js"></script>-->
-      <!--<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />-->
+      <script id="MapboxGL" src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js"></script>
+      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
 
-    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="  crossorigin=""></script>
+    <!--<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="  crossorigin=""></script>-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <!--<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css"/> <!--drozdova -->
     <link rel="stylesheet" href="css/styles.css"/>
 
     <script src="libraries/mappa.js"></script>
@@ -138,6 +139,8 @@
 
 </div>
   <div id="mapContainer"></div>
+    <!--<div id="map" style="width: 100%; height: 900px"></div>-->
+
     <!-- <input type="text" style="width: 50px; border-width: 0px; text-align: center;"> -->
 
 
@@ -336,8 +339,33 @@
   </div>
   </section>
 
+    <!--<script src="libraries/jquery-2.1.4.min.js"></script> &lt;!&ndash;drozdova &ndash;&gt;-->
+    <!--&lt;!&ndash;<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> &lt;!&ndash;drozdova &ndash;&gt;&ndash;&gt;-->
+    <!--<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script> &lt;!&ndash;drozdova &ndash;&gt;-->
+    <!--<script src="libraries/mappa.js"></script>-->
+    <!--<script src="libraries/p5.js"></script>-->
+    <!--<script src="libraries/p5.dom.js"></script>-->
+    <!--<script src="libraries/chroma.min.js"></script>-->
+    <!--<script src="drozdova_test.js"></script> &lt;!&ndash;drozdova &ndash;&gt;-->
+
+
     <script src="sketch_background.js"></script>
-    <!--<script src="drozdova_test.js"></script>-->
+
+
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-18136548-1']);
+      _gaq.push(['_trackPageview']);
+      (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
 
   </body>
 </html>

@@ -14,16 +14,17 @@ var data;
 var allYears;
 var slider;
 var nameP;
-const key = "pk.eyJ1IjoiZXZnZXNoYWRyb3pkb3ZhIiwiYSI6ImNqMjZuaGpkYTAwMXAzMm5zdGVvZ2c0OHYifQ.s8MMs2wW15ZyUfDhTS_cdQ";
 
 //var координати Києва
 const options = {
     lat: 50.45466,
     lng: 30.6238,
     zoom: 12,
-    disableZoom: true,
     style: 'YearsPng/{z}/{x}/{y}.png'
 };
+
+
+
 
 const mappa = new Mappa('Leaflet');
 
@@ -31,6 +32,7 @@ const mappa = new Mappa('Leaflet');
 // ЗАВАНТАЖЕННЯ ДАНИХ з json
 function preload(){
   data = loadJSON('./data/id_housesKiev.geojson');
+  console.log(data)
 }
 
 
@@ -69,7 +71,7 @@ function  setup(){
         }
   }
 
-    
+
   allYears = Object.keys(group_by_year).length;
   slider = createSlider(1854, 2019, 1854).parent('#slider');
   inp = createInput(slider.value() ).parent('#year');
@@ -81,6 +83,7 @@ function  setup(){
 var interval = 20000;
 // змінна початкового року
 var yearStart = 1854;
+
 let foo = chroma.scale(['black', '8c0040',  '8359d4', '00ffff']).mode('lab');
 
 // СТВОРЕННЯ ФУНКЦІЇ, яка буде малювати будинки зазначеного року
