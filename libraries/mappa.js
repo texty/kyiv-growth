@@ -330,6 +330,8 @@ var Leaflet = function (_TileMap) {
       this.map = L.map(this.id, {
         center: [this.options.lat, this.options.lng],
         zoom: this.options.zoom,
+        minZoom: 12,
+        maxZoom: 14,
         inertia: false
       });
 
@@ -1093,7 +1095,7 @@ var Google = function (_TileMap) {
         zoom: this.options.zoom || 6,
         mapTypeId: this.options.maptype || 'terrain',
         styles: this.options.styles || '',
-        minZoom: 1 || this.options.minZoom
+        minZoom: 12 || this.options.minZoom
       });
 
       var overlay = new google.maps.OverlayView();
