@@ -328,12 +328,31 @@ var Leaflet = function (_TileMap) {
       var _this2 = this;
 
       this.map = L.map(this.id, {
+        // scrollWheelZoom:false,
         center: [this.options.lat, this.options.lng],
         zoom: this.options.zoom,
         minZoom: 12,
         maxZoom: 14,
         inertia: false
       });
+
+      /* ----  drozdova ----- */
+      _this2.map.scrollWheelZoom.disable();
+
+      var clickToggle = function() {
+        if (_this2.map.scrollWheelZoom.enabled()) {
+          _this2.map.scrollWheelZoom.disable();
+        }
+        else {
+          _this2.map.scrollWheelZoom.enable();
+        }
+
+      };
+
+      this.map.on('click touchstart', clickToggle);
+
+      /* ---- end of drozdova ----- */
+
 
       if (!this.options.style) {
         Leaflet.messages().tiles();

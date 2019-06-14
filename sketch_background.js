@@ -23,9 +23,6 @@ const options = {
     style: 'YearsPng/{z}/{x}/{y}.png'
 };
 
-
-
-
 const mappa = new Mappa('Leaflet');
 
 
@@ -40,6 +37,9 @@ function  setup(){
     canvas = createCanvas(windowWidth * 0.95, windowHeight * 0.9).parent("#mapContainer");
     myMap = mappa.tileMap(options);
     myMap.overlay(canvas);
+
+
+
 
 
 // СТВОРЕННЯ СЛОВНИКА 'BUILDINGS' {усі роки, усі будинки для кожного з років}
@@ -109,6 +109,7 @@ let foo = chroma.scale(['black', '8c0040',  '8359d4', '00ffff']).mode('lab');
             }
      // myMap.options.zoom = 12;
      // myMap.onChange(myCustomFunction);
+     
  }
 
 
@@ -135,3 +136,5 @@ function draw(){
     inp.value(i);
    }
 }
+
+
