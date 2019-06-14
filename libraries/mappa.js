@@ -338,6 +338,7 @@ var Leaflet = function (_TileMap) {
 
       /* ----  drozdova ----- */
       _this2.map.scrollWheelZoom.disable();
+      
 
       var clickToggle = function() {
         if (_this2.map.scrollWheelZoom.enabled()) {
@@ -349,7 +350,7 @@ var Leaflet = function (_TileMap) {
 
       };
 
-      this.map.on('click touchstart', clickToggle);
+      this.map.on('click', clickToggle);
 
       /* ---- end of drozdova ----- */
 
