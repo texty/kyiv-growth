@@ -518,4 +518,14 @@ input[type=range]:focus::-ms-fill-upper {
   .mob {
     display: none !important; } }
 
+@media (hover: hover) {
+  .not-screens {
+    display: none; } }
+
+button {
+  padding: 5px;
+  font-weight: bold;
+  color: #464646;
+  letter-spacing: 1px; }
+
 /*# sourceMappingURL=styles.css.map */

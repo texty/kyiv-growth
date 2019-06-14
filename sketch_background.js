@@ -34,7 +34,7 @@ function preload(){
 
 
 function  setup(){
-    canvas = createCanvas(windowWidth * 0.95, windowHeight * 0.9).parent("#mapContainer");
+    canvas = createCanvas(windowWidth * 0.95, windowHeight * 0.8).parent("#mapContainer");
     myMap = mappa.tileMap(options);
     myMap.overlay(canvas);
 
