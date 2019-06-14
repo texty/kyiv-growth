@@ -304,6 +304,10 @@ h3 {
   line-height: 1.8;
   font-weight: normal;
   margin: 0; }
+  @media (max-width: 800px) {
+    h3 {
+      font-size: 18px;
+      font-weight: bold; } }
 
 h2 {
   font-size: 25px;
@@ -328,10 +332,10 @@ p.note {
     p.note {
       font-size: 28px; } }
 
-#pattern01 {
+.pattern01 {
   height: 100%; }
   @media (max-width: 800px) {
-    #pattern01 {
+    .pattern01 {
       width: 100%;
       height: auto; } }
 
