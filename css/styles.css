@@ -328,6 +328,13 @@ p.note {
     p.note {
       font-size: 28px; } }
 
+#pattern01 {
+  height: 100%; }
+  @media (max-width: 800px) {
+    #pattern01 {
+      width: 100%;
+      height: auto; } }
+
 .content {
   display: grid;
   grid-template-columns: 150px 10% 15% auto 20%;
