@@ -107,10 +107,25 @@ let foo = chroma.scale(['black', '8c0040',  '8359d4', '00ffff']).mode('lab');
                       //}
                 }
             }
-     // myMap.options.zoom = 12;
-     // myMap.onChange(myCustomFunction);
-     
  }
+
+
+/* кнопка кліку*/
+document.querySelector("#playME").addEventListener("click", function () {
+    //сюди треба написати, аби карта програвалась
+    // alert ("clicked");
+    var t = 1;
+    for(let k = 1854; k <= 2019; k++){
+        setTimeout(function timer() {
+            // console.log(k);
+            document.querySelector('input[type=range]').value = k;
+        }, t * 100);
+        t = t + 1;
+    }
+
+});
+
+
 
 
 
@@ -120,12 +135,12 @@ function draw(){
   // змінна яка утримує в собі час в мілісекундах, що пройшов від початку запуску фунції draw
   var tPresent = millis();
 
+
   // викликаємо фунцію в циклі, який проходиться по всіх роках
   var yearLast = slider.value();
   //background(255);
   for(var i = yearStart; i < yearLast; i++){
-   
-    var b = map(i, 1854, 2019, 0, 1);
+     var b = map(i, 1854, 2019, 0, 1);
 
     var mycolor = foo(b).rgb();
     fill(mycolor, 50);
@@ -136,5 +151,40 @@ function draw(){
     inp.value(i);
    }
 }
+
+
+
+function isAnyPartOfElementInViewport(el) {
+
+    const rect = el.getBoundingClientRect();
+    // DOMRect { x: 8, y: 8, width: 100, height: 100, top: 8, right: 108, bottom: 108, left: 8 }
+    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+    const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+
+    // http://stackoverflow.com/questions/325933/determine-whether-two-date-ranges-overlap
+    const vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
+    const horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
+
+    return (vertInView && horInView);
+}
+
+var vis = document.querySelector('#mapContainer');
+
+
+
+window.addEventListener('scroll', function() {
+    if (isAnyPartOfElementInViewport(vis)) {
+        console.log("is in view");
+    }
+    else {
+        document.querySelector('input[type=range]').value = 1854;
+        document.querySelector('input[type=text]').value = 1854;
+
+    }
+});
+
+
+
+
 
 
