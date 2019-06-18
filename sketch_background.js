@@ -17,8 +17,8 @@ var nameP;
 
 //var координати Києва
 const options = {
-    lat: 50.45466,
-    lng: 30.6238,
+    lat: 50.452798,
+    lng: 30.551424,
     zoom: 12,
     style: 'YearsPng/{z}/{x}/{y}.png'
 };
@@ -143,7 +143,7 @@ function draw(){
      var b = map(i, 1854, 2019, 0, 1);
 
     var mycolor = foo(b).rgb();
-    fill(mycolor[0], mycolor[1], mycolor[2], 50);
+    fill(mycolor[0], mycolor[1], mycolor[2]);
     stroke(mycolor[0], mycolor[1], mycolor[2]);
     strokeWeight(0.5);
     smooth();

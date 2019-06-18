@@ -89,6 +89,7 @@
       margin: auto; }
 
 #soc {
+  z-index: 1000;
   position: fixed;
   right: 0;
   top: 20px;
