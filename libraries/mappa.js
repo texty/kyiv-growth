@@ -350,7 +350,7 @@ var Leaflet = function (_TileMap) {
 
       };
 
-      this.map.on('click', clickToggle);
+      this.map.on('click', clickToggle, { passive: true });
 
       /* ---- end of drozdova ----- */
 
